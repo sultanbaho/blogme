@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Poppins' 
+          rel='stylesheet' />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta  name="viewport" content="width=device-width,initial-scale=1">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		html {
+ 		 scroll-behavior: smooth;
+}
+
+		.container {
+			position: relative;
+			text-align: center;
+			color: white;
+		}
+		.center {
+			color: white;
+			position: absolute;
+			top: 5%;
+			left: 50%;
+			transform: translate(-50%,20%);
+			font-size: 40px;
+			line-height: 1.4;
+			text-align: justify;
+			margin-left: 20px;
+			float: left;
+		}
+		.button{
+			background-color: transparent;
+			color: black;
+			background-repeat: no-repeat;
+			border:none;
+			transition: 0.3s;
+			text-decoration: none;
+			padding: 15px 32px;
+			text-align: center;
+			display: inline-block;
+			font-size: 16px;
+			cursor: pointer;
+			-ms-transform:translateY(-50%);
+			transform: translateY(-50%);
+			transform: translateX(50%);
+    		float: left;
+		}
+		.btn 
+		{
+			color: #fff;
+			border: 1px solid #fff;
+		}
+		.btn:hover {
+			transition: 0.8s;
+			opacity: 1;
+			background-color:#d11d53;
+			color: white;
+			border:1px solid #fff;
+		} 
+
+		ul {
+			list-style-type: none;
+			margin-top: 0;
+			margin:0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
+		li {
+			float: left;
+		}
+		 li a {
+		 	display: block;
+		 	color: white;
+		 	text-align: center;
+		 	padding: 20px 20px;
+		 	text-decoration: none;
+		 }
+
+		 li a:hover:not(.active) {
+ 				 background-color: #d11d53
+ 				 ;
+}
+
+	.active {
+  		background-color: #d11d53;
+}
+
+		.navbar {
+			height: 4rem;
+			overflow: hidden;
+			background-color: #222629;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			text-align: center;
+		}
+/* Header/Blog Title */
+.header {
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+.leftcolumn h3 {
+  color: #222f;
+  font-weight: 600;
+  margin: 50px 0;
+}
+.leftcolumn p {
+  color: #999;
+  padding: 0;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+.rightcolumn h3 {
+  color: #222f;
+  font-weight: 600;
+}
+
+.rightcolumn p{
+  color: #999;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+.comment-box {
+	border: 1px solid #ccc;
+	margin:50px 0;
+	padding: 10px 20px;
+	background:linear-gradient(330deg, #d11d53 , 55%, #fff 0%);
+}
+.comment-box h3 {
+	text-align: center;
+}
+.comment-form input, .comment-form textarea {
+	width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.comment-form button {
+	margin: 10px 0;
+}
+.pink-btn {
+  background-color: #fff; 
+  border: 1px solid #fff ;
+  margin: 0 5px;
+  color: #d11d53 ;
+  padding: 13px 27px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.pink-btn:hover {
+	color:#fff;
+	background-color:#d11d53 ;
+	text-decoration:none;
+ }
+ /*footer start*/
+.footersection {
+	width: 100%;
+	height: auto;
+	padding: 70px 0 20px 0;
+	position: relative;
+	background-color: #222629;
+	text-align:justify;
+}
+
+.footersection p {
+	color: #fff;
+}
+.footersection h3 {
+	text-transform: uppercase;
+	color: #fff;
+	margin-bottom: 25px;
+	font-size: 1.2rem !important;
+	font-weight: 600;
+	text-shadow: 0 20px 0 0 rgba(0,0,0,0.4);
+}
+.footer-div:nth-child(2) {
+	text-align: center;
+}
+.footer-div {
+	margin:30px 0; 
+}
+/*social media icons start*/
+
+.fa {
+  padding: 20px;
+  font-size: 25px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+/*social media icons CSS ends*/
+
+</style>
+</head>
+<body style="font-family: 'Poppins', sans-serif;">
+	<div class="container">
+		<img src="bg.jpeg" style="width: 100%; width: 100%;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: relative; 
+	clip-path: polygon(100% 0%,100% 75%,50% 100%, 0 75%,0 0);">
+	<div class="center";><h4>SPORE IS A CREATIVE ONE PAGE, WORDPRESS THEME FOR WEB DEVELOPERS WHO CHANGE THE WORLD.</h4><br>
+		<button class="button btn">Learn more</button>
+</div>
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto text-uppercase">
+					<li class="nav-item active">
+					<a class="navbar-brand font-weight-bold text-white">SPORE</a>
+				</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Services</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Courses</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#blog">Blogs</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contactus">Contact</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#aboutus">About</a>
+					</li>
+				</ul>
+			</div>
+			</div>
+		</nav>
+<div class="header">
+  <h2 style="text-align: center;">WELCOME TO OUR LATEST BLOGS</h2>
+</div>
+
+<div class="row">
+  <div class="leftcolumn" id="blog">
+    <div class="card">
+      <h3 style="text-align: center; font-weight: bold; font-size: 25px;"> Web Development online courses for Graduates.</h3>
+      <img src="left-blog.jpg" style="height: 90%;width: 100%;">
+      <p style="text-align: justify;"> Web development refers to building, creating, and maintaining websites. It includes aspects such as web design, web publishing, web programming, and database management. While the terms "web developer" and "web designer" are often used synonymously, they do not mean the same thing.</p>
+      <br>
+      <p>Our Front-end Development programme is where programming and creativity collide to build intricate, inventive, and interesting web interfaces by applying animations and motions, and advanced web programming, including JavaScript, Python, and CSS. </p>
+      <br>
+      <p>During this course, students will be able to study basic principles within the Web Design world and become fully equipped with all the necessary skills and knowledge so as to become successful web designers and developers. The course will enable students to become efficiently equipped with all the necessary skills and knowledge in order to advance in international organisations and achieve positive results when operating in executive positions. -</p>
+
+    </div>
+    <div class="card">
+      <h3 style="text-align: center; font-weight: bold; font-size: 25px;"> Web Development Services.</h3>
+      <img src="web services.jpg" style="height: 90%;width: 100%;">
+      <p style="text-align: justify;"> Web development services are used to design, build, support, and evolve all types of web-based software. With 22 years in web development, We deliver intuitive and fast websites, web portals, and other web solutions that bring about digital transformation and enhance business workflows.</p>
+      <br>
+      <p>Our web development services open the potential for such benefits as:Growth of customer/user base,New Digital and business channels,Increase in Conversions.</p>
+      <br>
+      <p>Consideration of user experience, search engine optimization, ease of use, and technical details are just a few elements that are involved in developing a website that is designed to perform in today’s competitive marketplace. Our web design & development team has established a host of effective services to facilitate the growth of your business.</p>
+
+    </div>
+    <div class="comment-box" id="contactus">
+        <h3 style="text-align: left;">Leave a comment</h3>
+        <form class="comment-form">
+          <input type="text" placeholder ="Enter your name" required>
+          <input type="email" placeholder ="Enter Email" required>
+          <textarea rows="5" placeholder="Your comment here"></textarea>
+          <button type="submit" class="pink-btn">POST COMMENT</button>
+        </form>
+      </div>
+
+  </div>
+  <div class="rightcolumn" id="blog">
+    <div class="card">
+      <h3 style="text-align: left;">Web Development Bootcamp</h3>
+      <img src="right-blog.jpg" style="height: 90%;width: 100%;">
+      <p style="text-align: justify;">Web Development Bootcamp is a short-term program that teaches participants the fundamentals of multiple computer languages and development stacks. Like other coding bootcamps, full-stack programs usually last a few months. They run online and in person.</p>
+      <br>
+      <p style="text-align: justify;">The Complete 2021 Web Development Bootcamp Become a full-stack web developer with just one course. HTML, CSS, Javascript, Node, React, MongoDB and more!</p>
+      <br>
+      <p style="text-align: justify;">Coding bootcamps are a proven way to land a web development job. Many bootcamps boast high job placement rates, impressive alumni salaries, and multi-year data to demonstrate success. Additionally, bootcamps can be markedly less costly than college.</p>     
+    </div>
+    <div class="card">
+      <h3 style="text-align: left;">Web Development Scope</h3>
+      <img src="web scope.jpg" style="height: 90%;width: 100%;">
+      <p style="text-align: justify;">With the tremendous progress in the launch of websites, people who can create exemplary designs and platforms for their online presence is what businesses are searching for. Web developers and designers are bringing in all the best of their technical expertise and skills to develop and unique design websites that are and capable of pulling the crowd.</p>
+      <br>
+      <p style="text-align: justify;">For any business, a website matters more than anything, when it comes to reaching out to customers online. A website is the representation of the business online. These days, every business realizes the need for having a website and are putting in efforts to design and develop the best site for taking their products or services online. This is where we can see a great deal of scope for web development and design.</p>
+      <br>
+      <p style="text-align: justify;">Most web developers and designers are familiar with the latest tools, techniques, technologies, and frameworks that will help them get beautiful sites up in a short span of time. The development time of websites has come down with the agile technologies that make development easier. Here, we will cover the scope and future of web development.</p>     
+    </div>
+    <div class="card">
+      <h3 style="text-align: center;">Web Developer Jobs</h3>
+      <img src="popular-post.jpg" style="height: 300px;width: 300px;">
+      <p style="text-align: justify;">Web developers and digital designers held about 174,300 jobs in 2019. The largest employers of web developers and digital designers were found. Educational requirements for web developers and digital designers vary, ranging from a high school diploma to a bachelor’s degree.</p>   
+    </div>
+  
+  </div>
+</div>
+		
+<!--footer start-->
+      <footer class="footersection" id="aboutus">
+      	<div class="container">
+      		<div class="row">
+      			<div class="col-lg-4 col-md-6 col-12 footer-div">
+      				<div>
+      					<h3>ABOUT Spore</h3>
+      					<p>The world has become so fast paced that people don't want to stand by reading a page of information to be they would much rather look at presentation and understand the message. </p>
+      				</div>
+      			</div>
+
+      			
+      			</div>
+     
+      		</div>
+      		<div class="container">
+      		<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-twitter"></a>
+			<a href="#" class="fa fa-linkedin"></a>
+			<a href="#" class="fa fa-instagram"></a>
+			<a href="#" class="fa fa-snapchat-ghost"></a>
+		</div>
+ 
+      		<div class="mt-5 text-center">
+      			<p style="text-align: center;">Copyright ©2019 All rights reserved. This template is made with love by</p>
+      			<p style="text-align: center;">Spore </p>
+      		</div>
+ 			</div>     
+      </footer>
+       <!--footer end-->
+	
+       
+
+</body>
+</html>
